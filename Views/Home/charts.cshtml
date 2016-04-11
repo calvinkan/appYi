@@ -1,5 +1,22 @@
-﻿@{
+﻿@model List<tdweb.Models.StockData.GroupList>
+
+@{
     ViewBag.Title = "charts";
 }
 
 <h2>charts</h2>
+
+<table>
+    
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>Month</td>
+        <td>@item.Month</td>
+        <td>Year</td>
+        <td>@item.Year</td>
+        <td>Total</td>
+        <td>@item.Total</td>
+    </tr>
+    }
+</table>
